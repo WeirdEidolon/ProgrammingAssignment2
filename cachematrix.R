@@ -28,8 +28,9 @@ makeCacheMatrix <- function(x = matrix()) {
          getinverse=getinverse)
 }
 
-## return the inverse of a CacheMatrix object. if the inverse has not been calculated
-## do so and cache it on the CacheMatrix object. otherwise return the cached inverse.
+## return the inverse of the matrix stored in a CacheMatrix object. if the inverse has 
+## not been calculated do so and cache it on the CacheMatrix object. otherwise return 
+## the cached inverse.
 cacheSolve <- function(x, ...) {
     i <- x$getinverse()
     if (!is.null(i)) {
